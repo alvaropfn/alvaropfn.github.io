@@ -2,18 +2,25 @@
 	--dark: #413f3f;
 	--gray: #8a8a8a;
 	--white: #eaeaea;
-	--guava: #b97a98;
+	--guava: #6f5e5e;
 	--green: #53c953;
 	--build-top: url('public/img/build_top.jpg');
 	--build-bot: url('public/img/build_bot.jpg');
 }
-.floater-top{
+.space-around{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.floater-bot {
 	margin-left: 10px;
+	margin-right: 10px;
 	position:absolute;
 	bottom:15%
 }
 
 .relative{position:relative;}
+
 .bg-img{
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -21,12 +28,26 @@
 	background-position: center top;
 }
 
+
+
+.text-centered{
+	text-align: center;
+}
+.text-justifyed{
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 #bg-top{
 	background-image: var(--build-top);
 }
-
+.quote{
+	font-family: 'Proza Libre';
+	font-size:35px;
+}
 .full-vh{
-	height: 100vh;
+	min-height: 100vh;
+	/* height: 100vh; */
 }
 
 .color-dark{ color: var(--dark); }
@@ -34,3 +55,9 @@
 .color-white{ color: var(--white); }
 .color-guava{ color: var(--guava); }
 .color-green{ color: var(--green); }
+
+.bg-dark{ background-color: var(--dark); }
+.bg-gray{ background-color: var(--gray); }
+.bg-white{ background-color: var(--white); }
+.bg-guava{ background-color: var(--guava); }
+.bg-green{ background-color: var(--green); }
