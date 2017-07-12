@@ -7,6 +7,10 @@
 	--build-top: url('public/img/build_top.jpg');
 	--build-bot: url('public/img/build_bot.jpg');
 }
+body{
+	/* width: 100vw; */
+}
+
 .space-around{
 	margin-left: 50px;
 	margin-right: 50px;
