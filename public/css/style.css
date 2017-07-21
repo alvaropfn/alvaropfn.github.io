@@ -24,7 +24,7 @@
 		"hero_text	bot-none";
 
 	grid-template-rows: 150px auto 150px;
-	grid-template-columns: 150px auto ;
+	grid-template-columns: auto auto ;
 }
 
 @media (min-width: 450px) {
@@ -41,15 +41,21 @@
 	}
 }
 
-
+/*TODO*/
+/*
+fix hero_read positioning on desktop version
+*/
 .hero_head{
 	grid-area: hero_head;
+	width: 150px;
+	height: 150px;
 	font-size: 1.5em;
 	text-align: center;
 }
 .hero_text{
 	grid-area: hero_text;
 	font-family: Arapey;
+	align-self: end;
 }
 
 .hero_text .soft{
