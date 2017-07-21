@@ -41,12 +41,11 @@
 }
 
 .section_title{
+	padding-top: 5px;
 	font-size: 2em;
-	
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	text-align: center;
-	text-align: justify;
-	text-justify: inter-word;
+	text-justify: start;
 }
 .section_title .footer{
 	font-size: 1em;
@@ -62,8 +61,7 @@
 	background-position: center top;
 }
 
-/*TODO*/
-/*
+/*	TODO
 fix hero_read positioning on desktop version
 */
 .hero_head{
@@ -99,34 +97,36 @@ fix hero_read positioning on desktop version
 .relative{position:relative;}
 
 #about_container{
-	display: grid;
 	width: 100%;
-
-	grid-template-areas:
-		"left_none	top_title	right_none"
-		"left_none	mid_text	right_none"
-		"left_none	bot_quote	right_none";
-
-	grid-template-rows: 50px auto 50px;
-	grid-template-columns: 30px auto 30px;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around
+	padding 10px;
 	align-items: center;
+	
 }
 
 #about_container > .top_title{
-	grid-area: top_title;
-
+	
 }
 
 #about_container > .mid_text{
-	grid-area: mid_text;
 	font-weight: 700;
-	justify-self: stretch !important;
+	align-self: justify;
 }
 
+#about_container > .mid_text p{
+	padding: 20px 0px 0px 20px;
+}
+#about_container > .mid_text p span{
+	font-size: 1.75em;
+	font-style: italic;
+	padding-left: 7px;
+}
 #about_container > .bot_quote{
+	padding-top: 15px;
 	grid-area: bot_quote;
-
+	
 }
 
 .quote{
@@ -134,8 +134,7 @@ fix hero_read positioning on desktop version
 	font-size:35px;
 }
 
-/*TODO*/
-/*
+/*	TODO
 fix this to rotate last quote of section About properly
 */
 .rotate90{
