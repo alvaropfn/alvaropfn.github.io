@@ -6,6 +6,8 @@
 	--green: #53c953;
 	--build-top: url('public/img/build_top.jpg');
 	--build-bot: url('public/img/build_bot.jpg');
+	--city-mid: url('public/img/city.jpg');
+	
 }
 
 #roof_container{
@@ -139,6 +141,120 @@ fix this to rotate last quote of section About properly
 */
 .rotate90{
 	transform: rotateZ(90deg);
+}
+
+
+/*TODO
+find a way to apply blur on BG
+without blur every child on this section
+*/
+
+#skills_container > *{
+	filter: blur(0px);
+}
+
+#skills_container{
+	filter: blur(0px);
+	display: grid;
+	grid-template-areas:
+		"title	title"
+		"static_text	left_1"
+		"static_text	left_2"
+		"static_text	left_3"
+		"static_text	left_4"
+		"static_text	left_5"
+		"static_text	left_6";
+
+	grid-template-rows: auto;
+	grid-template-columns: auto 100px ;
+	align-items: center;
+}
+
+#skills_container .item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: right;
+	/* padding-right: 7px; */
+}
+
+@media (min-width: 450px){
+	#skills_container{
+		filter: blur(0px);
+		display: grid;
+		grid-template-areas:
+			"title			title	title"
+			"static_text	left_1	left_2"
+			"static_text	left_3	left_4"
+			"static_text	left_5	left_6";
+
+		grid-template-rows: auto;
+		grid-template-columns: auto 200px 200px ;
+	}
+	#skills_container .item{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+#skills_container .section_title{
+	grid-area: title;
+}
+
+#skills_container button{
+	color: var(--white);
+	border: 0px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+#skills_container p{
+	padding-left: 10px;
+	color: white;
+}
+
+#skills_container .static_text{
+	grid-area: static_text;
+}
+
+/*TODO
+find a way to make the text float only on skills section
+*/
+.float_text{
+	/* position: fixed;
+	top: 20px; */
+}
+
+.left_1{
+	grid-area: left_1;
+}
+
+.left_2{
+	grid-area: left_2;
+}
+
+.left_3{
+	grid-area: left_3;
+}
+
+.left_4{
+	grid-area: left_4;
+}
+
+.left_5{
+	grid-area: left_5;
+}
+
+.left_6{
+	grid-area: left_6;
+}
+
+.skill_img{
+	width: 100px;
+	height: 100px;
 }
 
 .color_dark{ color: var(--dark); }
