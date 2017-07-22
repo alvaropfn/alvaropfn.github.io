@@ -157,13 +157,13 @@ without blur every child on this section
 	filter: blur(0px);
 	display: grid;
 	grid-template-areas:
-		"title	title"
+		"title			title"
 		"static_text	left_1"
 		"static_text	left_2"
 		"static_text	left_3"
 		"static_text	left_4"
 		"static_text	left_5"
-		"static_text	left_6";
+		"static_button	left_6";
 
 	grid-template-rows: auto;
 	grid-template-columns: auto 100px ;
@@ -186,7 +186,7 @@ without blur every child on this section
 			"title			title	title"
 			"static_text	left_1	left_2"
 			"static_text	left_3	left_4"
-			"static_text	left_5	left_6";
+			"static_button	left_5	left_6";
 
 		grid-template-rows: auto;
 		grid-template-columns: auto 200px 200px ;
@@ -228,28 +228,33 @@ find a way to make the text float only on skills section
 	top: 20px; */
 }
 
-.left_1{
+#skills_container .left_1{
 	grid-area: left_1;
 }
 
-.left_2{
+#skills_container .left_2{
 	grid-area: left_2;
 }
 
-.left_3{
+#skills_container .left_3{
 	grid-area: left_3;
 }
 
-.left_4{
+#skills_container .left_4{
 	grid-area: left_4;
 }
 
-.left_5{
+#skills_container .left_5{
 	grid-area: left_5;
 }
 
-.left_6{
+#skills_container .left_6{
 	grid-area: left_6;
+}
+#skills_container .static_button{
+	grid-area: static_button;
+	color: var(--green);
+	align-self: center;
 }
 
 .skill_img{
