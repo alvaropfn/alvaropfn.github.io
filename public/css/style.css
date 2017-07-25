@@ -165,7 +165,7 @@ without blur every child on this section
 		"static_text	left_5"
 		"static_button	left_6";
 
-	grid-template-rows: auto;
+	grid-template-rows: auto 150px 150px 150px 150px 150px 150px;
 	grid-template-columns: auto 100px ;
 	align-items: center;
 }
@@ -188,7 +188,7 @@ without blur every child on this section
 			"static_text	left_3	left_4"
 			"static_button	left_5	left_6";
 
-		grid-template-rows: auto;
+		grid-template-rows: auto 200px 200px 200px;
 		grid-template-columns: auto 200px 200px ;
 	}
 	#skills_container .item{
@@ -268,9 +268,10 @@ find a way to make the text float only on skills section
 #curricullum_container{
 	display: grid;
 	grid-template-areas:
-		"title"
-		"professional_container"
-		"educational_container";
+		"title	"
+		"professional_container	"
+		"educational_container	"
+		"buttons_container	";
 
 	grid-template-rows: auto;
 	grid-template-columns: auto;
@@ -291,17 +292,16 @@ find a way to make the text float only on skills section
 		display: grid;
 		grid-template-areas:
 			"title	title"
-			"professional_container	educational_container";
+			"professional_container	educational_container"
+			"buttons_container	buttons_container";
 
 		grid-template-rows: auto;
 		grid-template-columns: 46% 46%;
 	}
-	
 }
 
 #curricullum_container .section_title{
 	grid-area: title;
-
 }
 
 #curricullum_container .educational_container{
@@ -311,6 +311,13 @@ find a way to make the text float only on skills section
 #curricullum_container .professional_container{
 	grid-area: professional_container;
 }
+
+#curricullum_container .buttons_container{
+	grid-area: buttons_container;
+	display: flex;
+	justify-content: space-around;
+}
+
 
 #curricullum_container .subsection{
 	margin-bottom: 1em;
@@ -333,9 +340,11 @@ find a way to make the text float only on skills section
 #curricullum_container .duration{
 	font-size: 0.85em;
 }
+
 #curricullum_container .content{
 	padding-top: 10px;
 }
+
 
 
 .color_dark{ color: var(--dark)!important; }
