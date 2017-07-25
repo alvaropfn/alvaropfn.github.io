@@ -140,7 +140,7 @@ fix hero_read positioning on desktop version
 fix this to rotate last quote of section About properly
 */
 .rotate90{
-	transform: rotateZ(90deg);
+	transform: rotate(90deg);
 }
 
 
@@ -220,6 +220,7 @@ without blur every child on this section
 	grid-area: static_text;
 }
 
+
 /*TODO
 find a way to make the text float only on skills section
 */
@@ -262,14 +263,89 @@ find a way to make the text float only on skills section
 	height: 100px;
 }
 
-.color_dark{ color: var(--dark); }
-.color_gray{ color: var(--gray); }
-.color_white{ color: var(--white); }
-.color_guava{ color: var(--guava); }
-.color_green{ color: var(--green); }
 
-.bg_dark{ background-color: var(--dark); }
-.bg_gray{ background-color: var(--gray); }
-.bg_white{ background-color: var(--white); }
-.bg_guava{ background-color: var(--guava); }
-.bg_green{ background-color: var(--green); }
+
+#curricullum_container{
+	display: grid;
+	grid-template-areas:
+		"title"
+		"professional_container"
+		"educational_container";
+
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+	grid-column-gap: 8%;
+	
+}
+
+#curricullum_container .flex_container{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	padding: 5px;
+	/* justify-content: space-around; */
+}
+
+@media (min-width: 450px){
+	#curricullum_container{
+		display: grid;
+		grid-template-areas:
+			"title	title"
+			"professional_container	educational_container";
+
+		grid-template-rows: auto;
+		grid-template-columns: 46% 46%;
+	}
+	
+}
+
+#curricullum_container .section_title{
+	grid-area: title;
+
+}
+
+#curricullum_container .educational_container{
+	grid-area: educational_container;
+}
+
+#curricullum_container .professional_container{
+	grid-area: professional_container;
+}
+
+#curricullum_container .subsection{
+	margin-bottom: 1em;
+}
+
+#curricullum_container .subsection_title{
+	color: var(--guava);
+	padding-bottom: 10px;
+	font-size: 1.7em;
+	font-family: "Open Sans";
+	text-align: center;
+	text-justify: start;
+	font-weight: bold;
+}
+
+#curricullum_container h2{
+	text-align: left !important;
+}
+
+#curricullum_container .duration{
+	font-size: 0.85em;
+}
+#curricullum_container .content{
+	padding-top: 10px;
+}
+
+
+.color_dark{ color: var(--dark)!important; }
+.color_gray{ color: var(--gray)!important; }
+.color_white{ color: var(--white)!important; }
+.color_guava{ color: var(--guava)!important; }
+.color_green{ color: var(--green)!important; }
+
+.bg_dark{ background-color: var(--dark)!important; }
+.bg_gray{ background-color: var(--gray)!important; }
+.bg_white{ background-color: var(--white)!important; }
+.bg_guava{ background-color: var(--guava)!important; }
+.bg_green{ background-color: var(--green)!important; }
