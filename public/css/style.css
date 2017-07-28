@@ -358,3 +358,17 @@ find a way to make the text float only on skills section
 .bg_white{ background-color: var(--white)!important; }
 .bg_guava{ background-color: var(--guava)!important; }
 .bg_green{ background-color: var(--green)!important; }
+
+
+.slider-for{
+	 width: 350px;
+	height: 150px; 
+	background-color: #6f5e5e;
+}
+.your_element{
+	 width: 100px;
+	height: 100px; 
+	background-color: #53c953;
+	text-align: center;
+}
+
