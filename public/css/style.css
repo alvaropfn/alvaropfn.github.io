@@ -187,15 +187,12 @@ section[id], [id] { scroll-margin-top: 72px; }
 	isolation: isolate;
 }
 
-/* Blurred background image.
-   Uses inset: -24px so the blur fringe is clipped by overflow: hidden
-   on .hero. Adjust the blur radius (currently 10px) to taste. */
 .hero::before {
 	content: "";
 	position: absolute;
 	inset: -24px;
 	background: var(--bg-hero) center / cover no-repeat;
-	filter: blur(8px);
+	filter: blur(6px);
 	z-index: -2;
 	pointer-events: none;
 }
@@ -280,7 +277,8 @@ section[id], [id] { scroll-margin-top: 72px; }
 }
 
 .hero_thesis {
-	color: var(--gray);
+	color: rgba(234, 234, 234, 0.8);
+	color: var(--dark);
 	font-size: var(--step_0);
 	margin: 0 0 1.5rem;
 }
