@@ -157,12 +157,13 @@ function getContainer(hydrateKey) {
 	return document.querySelector(`[data-hydrate="${hydrateKey}"]`);
 }
 
-async function hydrate(key, renderer, { onEmpty, onSuccess } = {}) {
+async function hydrate(key, renderer, { onEmpty, onSuccess, filter } = {}) {
 	const container = getContainer(key);
 	if (!container) return { key, status: 'no-container' };
 
 	try {
-		const docs = await fetchCollection(key);
+		let docs = await fetchCollection(key);
+		if (typeof filter === 'function') docs = docs.filter(filter);
 		if (!docs.length) {
 			onEmpty?.();
 			return { key, status: 'empty', count: 0 };
@@ -187,7 +188,9 @@ async function run() {
 	const t0 = performance.now();
 	const results = await Promise.allSettled([
 		hydrate('projects', renderProject),
-		hydrate('experience', renderExperience),
+		hydrate('experience', renderExperience, {
+			filter: (x) => !x.isSabbatical
+		}),
 		hydrate('testimonials', renderTestimonial, {
 			onSuccess: revealTestimonials
 		})
