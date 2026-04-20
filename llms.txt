@@ -1,0 +1,67 @@
+# Álvaro Portela Figueiredo Neto — Senior Software Engineer, Frontend
+
+> Senior Software Engineer with 9 years shipping production frontend. Robotics background (patent holder, 2× IEEE silver) translated into high-precision, performant web systems. Based in Natal, Brazil. Remote-first, available for Senior or Staff Frontend roles — architecture-heavy work, preferably in FinTech, consultancy, or public sector.
+
+## Identity
+
+- **Full name**: Álvaro Portela Figueiredo Neto
+- **Short**: Álvaro Portela
+- **Role**: Senior Software Engineer — Frontend Focus
+- **Location**: Natal, RN, Brazil (GMT-3)
+- **Email**: alvaropfn@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/alvaropfn
+- **GitHub**: https://github.com/alvaropfn
+- **Twitter / X**: https://x.com/alvaroportela
+- **Portfolio**: https://alvaropfn.github.io/
+
+## Narrative
+
+From robotics to high-scale frontends. Álvaro started in mechatronics — co-authored a patent for a soil-plasticity testing tool through UFRN, earned two silver medals at IEEE Latin America Robotics Competitions (2018, 2019), and co-founded a 50-person university maker group (GIM) that ran 3 editions of Arduino Day reaching up to 800 visitors. That precision-engineering background translated into a frontend career focused on scalable architecture, clean structure, clear UX and performance.
+
+## Expertise
+
+- **Frontend Engineering**: Vue 3, Nuxt, React, TypeScript, Pinia, GraphQL/Apollo, Cypress, Playwright
+- **Legacy Migrations**: Vue 2 → 3, monolith → microfrontends, Angular → modern stacks, incremental rewrite patterns
+- **Performance Engineering**: Astro, Islands Architecture, Core Web Vitals (LCP/INP/CLS), Lighthouse CI, bundle analysis
+
+Also comfortable with: Java, Python, C++, Dart/Flutter, C#, .NET, PostgreSQL, SQL Server, Docker, ArgoCI.
+
+## Professional experience (reverse chronological)
+
+- **Oliver Wyman** — Senior Frontend Engineer · Apr 2025 – Oct 2025. Primary engineer on a large-scale web platform migration.
+- **Sabbatical** — Oct 2025 – Present.
+- **Imobanco** — Senior Frontend Engineer · Jul 2023 – Mar 2024. Led small team on responsive web+mobile financial app.
+- **Sabbatical** — Mar 2024 – Apr 2025.
+- **Friday Finance** (Germany, remote) — Full Stack Engineer · Apr 2022 – Jul 2023. Multilingual financial analytics web app for SMBs across Europe using Nuxt + Vue 3 + GraphQL + Chart.js.
+- **TCE-RN** — Full Stack Engineer · Jul 2019 – Dec 2020. Migrated legacy state-government systems; reduced multi-week processes to days.
+- **SINFO-UFRN** — Intern · Feb 2016 – Dec 2017. QA for SIGAA (used across Brazilian federal universities) and hardware/software for university restaurant ticket gates.
+
+## Selected projects
+
+1. **SIAI — Personnel Acts** (TCE-RN, 2019–2020). Public record: https://pluni.imd.ufrn.br/pluni/4/visualizarProduto. Eliminated backlog in ~80% of the Court's caseload.
+2. **SIAI — Public Competitions** (TCE-RN, 2019–2020). Public record: https://pluni.imd.ufrn.br/pluni/44/visualizarProduto.
+3. **Plasticity Limit Tool** (Patent, UFRN). Patent record: https://agir.ufrn.br/vitrine/patentes/2000.
+4. **Friday Finance Platform** (Germany, 2022–2023). Closed-source financial analytics web app with Nuxt + Vue 3 + GraphQL.
+5. **Imobanco Web & Mobile** (2023–2024). Responsive fintech platform, closed-source.
+6. **Oliver Wyman Platform Migration** (2025). Large-scale platform migration, closed-source.
+
+## Recognition
+
+- Co-author of a patent for the **Plasticity Limit Tool**, filed through UFRN.
+- **2nd Place** — IEEE Latin America Robotics Competition 2019 (software for simulated-port navigation).
+- **2nd Place** — IEEE Latin America Robotics Competition 2018 (hardware + software for robotic claw).
+- Co-founded **GIM** (Maker Integration Group) at UFRN.
+
+## Education
+
+- **Postgraduate in Information Technology**, UFRN, 2018–2020. Partnership with TCE-RN.
+- **Bachelor in Information Technology**, UFRN, 2014–2017. Software Engineering focus. Interdisciplinary program covering Project Management, Design Patterns, C++, Java, Python.
+
+## Languages
+
+- Portuguese (native)
+- English (B2)
+
+## Contact intent
+
+Best fit: Senior or Staff Frontend roles, remote-first, preferably architecture-heavy work in FinTech, consultancy or public sector. Best reached by email (alvaropfn@gmail.com) or LinkedIn.

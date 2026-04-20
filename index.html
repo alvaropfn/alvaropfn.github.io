@@ -1,182 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="public/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Palanquin|Proza+Libre" rel="stylesheet">
+	<meta name="theme-color" content="#413f3f">
+
+	<title>Álvaro Portela Figueiredo Neto — Senior Software Engineer · Frontend</title>
+	<meta name="description" content="Senior Software Engineer, frontend-focused. Building high-precision, performant web systems. From robotics to high-scale frontends. Vue · Nuxt · Astro · TypeScript. 9 years across Brazil and Germany.">
+	<meta name="author" content="Álvaro Portela Figueiredo Neto">
+	<meta name="keywords" content="Senior Frontend Engineer, Staff Frontend Engineer, Vue, Nuxt, Astro, TypeScript, React, Node.js, Legacy Migrations, Performance Engineering, FinTech, Remote, Brazil">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+	<link rel="canonical" href="https://alvaropfn.github.io/">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="profile">
+	<meta property="og:url" content="https://alvaropfn.github.io/">
+	<meta property="og:title" content="Álvaro Portela — Senior Software Engineer · Frontend">
+	<meta property="og:description" content="Senior Software Engineer, frontend-focused. Building high-precision, performant web systems. From robotics to high-scale frontends.">
+	<meta property="og:image" content="https://alvaropfn.github.io/public/img/head.png">
+	<meta property="og:image:alt" content="Álvaro Portela portrait">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="Álvaro Portela — Portfolio">
+	<meta property="profile:first_name" content="Álvaro">
+	<meta property="profile:last_name" content="Portela Figueiredo Neto">
+	<meta property="profile:username" content="alvaropfn">
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@alvaroportela">
+	<meta name="twitter:creator" content="@alvaroportela">
+	<meta name="twitter:title" content="Álvaro Portela — Senior Software Engineer · Frontend">
+	<meta name="twitter:description" content="Senior Software Engineer, frontend-focused. Building high-precision, performant web systems.">
+	<meta name="twitter:image" content="https://alvaropfn.github.io/public/img/head.png">
+
+	<!-- JSON-LD: Person schema for AI agents and search -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Álvaro Portela Figueiredo Neto",
+		"givenName": "Álvaro",
+		"familyName": "Portela Figueiredo Neto",
+		"jobTitle": "Senior Software Engineer, Frontend",
+		"description": "Senior Software Engineer specializing in high-precision, performant web systems. From robotics to high-scale frontends, with expertise in legacy migrations and performance engineering.",
+		"url": "https://alvaropfn.github.io/",
+		"image": "https://alvaropfn.github.io/public/img/head.png",
+		"email": "mailto:alvaropfn@gmail.com",
+		"knowsAbout": [
+			"Vue.js",
+			"Nuxt",
+			"Astro",
+			"TypeScript",
+			"JavaScript",
+			"React",
+			"Node.js",
+			"GraphQL",
+			"Legacy Migrations",
+			"Performance Engineering",
+			"Islands Architecture",
+			"Core Web Vitals",
+			"Frontend Architecture",
+			"Jest",
+			"Cypress",
+			"Playwright"
+		],
+		"knowsLanguage": [
+			{ "@type": "Language", "name": "Portuguese", "alternateName": "pt-BR" },
+			{ "@type": "Language", "name": "English", "alternateName": "en" }
+		],
+		"award": [
+			"Co-author of a patent — Plasticity Limit Tool, filed through UFRN",
+			"2nd Place — IEEE Latin America Robotics Competition 2019",
+			"2nd Place — IEEE Latin America Robotics Competition 2018"
+		],
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "Universidade Federal do Rio Grande do Norte (UFRN)",
+			"url": "https://www.ufrn.br/"
+		},
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Independent / Open to Senior & Staff Frontend roles"
+		},
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Natal",
+			"addressRegion": "RN",
+			"addressCountry": "BR"
+		},
+		"sameAs": [
+			"https://github.com/alvaropfn",
+			"https://www.linkedin.com/in/alvaropfn",
+			"https://x.com/alvaroportela"
+		]
+	}
+	</script>
+
+	<!-- JSON-LD: WebSite schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"url": "https://alvaropfn.github.io/",
+		"name": "Álvaro Portela — Portfolio",
+		"description": "Portfolio of Álvaro Portela Figueiredo Neto, Senior Software Engineer, Frontend.",
+		"inLanguage": "en",
+		"author": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" }
+	}
+	</script>
+
+	<!-- JSON-LD: per-project CreativeWork entries (mirrors the Projects section) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "CreativeWork",
+				"name": "SIAI — Personnel Acts",
+				"description": "Web system that automates validation of personnel concession acts for the Court of Auditors of Rio Grande do Norte. Eliminated the backlog in ~80% of the Court's total caseload.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"dateCreated": "2019",
+				"keywords": "Full-Stack, Legacy Migration, Public Sector, Brazil",
+				"url": "https://pluni.imd.ufrn.br/pluni/4/visualizarProduto"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "SIAI — Public Competitions",
+				"description": "Companion platform to enforce internal regulations while overseeing public competitions run by the state.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"dateCreated": "2019",
+				"keywords": "Full-Stack, Compliance, Public Sector",
+				"url": "https://pluni.imd.ufrn.br/pluni/44/visualizarProduto"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Plasticity Limit Tool (Patent)",
+				"description": "Automated device standardizing the soil plasticity limit test, traditionally executed by hand. Co-authored patent filed through UFRN.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"keywords": "Patent, Hardware + Software, Research",
+				"url": "https://agir.ufrn.br/vitrine/patentes/2000"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Friday Finance Platform",
+				"description": "Financial analytics web application surfacing the financial health of SMBs across Europe. Multilingual Nuxt + Vue 3 frontend, GraphQL bank integrations, Chart.js dashboards, Node + Prisma backend.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"dateCreated": "2022",
+				"keywords": "Nuxt, Vue 3, GraphQL, Data Visualization, FinTech, Germany"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Imobanco Web & Mobile",
+				"description": "Led a small team building a responsive web + mobile application for financial services, with focus on delivery cadence, performance, and mentoring.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"dateCreated": "2023",
+				"keywords": "Team Lead, Frontend, FinTech"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Oliver Wyman Platform Migration",
+				"description": "Primary engineer on the migration of a large-scale web platform. Reusable components, automated tests, CI/CD releases through ArgoCI and Docker.",
+				"creator": { "@type": "Person", "name": "Álvaro Portela Figueiredo Neto" },
+				"dateCreated": "2025",
+				"keywords": "Legacy Migration, CI/CD, Consulting"
+			}
+		]
+	}
+	</script>
+
+	<link rel="icon" type="image/png" href="public/img/head.png">
+	<link rel="apple-touch-icon" href="public/img/head.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600;700&family=Proza+Libre:ital,wght@0,400;1,400&display=swap">
+
+	<link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-	<!--########################## TOP ############################-->
-<section id="roof_container" class="full_height bg_img" style="background-image: var(--build-top); ">
-	<div class="hero_head">
-		<img src="public/img/head.png" alt="" >
-		<h1 class="color_gray">Álvaro Portela</h1>
-	</div>
 
+<a class="skip_link" href="#main">Skip to content</a>
 
-	<div class="hero_text">
-		<div class="floater_bot">
-			<span class="soft">
-				Software
-			</span>
-			<span class="engineer">
-				Engineer
-			</span>
-			
-			<svg height=10 width=100%> <line x1="0" y1="0" x2="50%" y2="0" style="stroke:#413f3f; stroke-width: 7;" /></svg>
-			<p class="color_gray regular_text">Passionated to build stuffs.</p>
-		</div>
-	</div>
-</section>
+<nav class="site_nav" aria-label="Main navigation">
+	<a class="nav_brand" href="#hero">AP.</a>
+	<ul class="nav_links" role="list">
+		<li><a href="#about">About</a></li>
+		<li><a href="#expertise">Expertise</a></li>
+		<li><a href="#projects">Projects</a></li>
+		<li><a href="#experience">Experience</a></li>
+		<li><a href="#recognition">Recognition</a></li>
+		<li data-nav="testimonials" hidden><a href="#testimonials">Testimonials</a></li>
+		<li><a href="#personal">Personal</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</nav>
 
-<!--########################## ABOUT ME ############################-->
-<section id="about_container" class="full_height bg_white">
-		<h1 class="color-guava section_title" >About Me</h1>
-		<div class="color_guava mid_text">
-			<p><span>B</span>acon ipsum dolor amet pastrami sausage shankle, drumstick biltong bacon venison ham chicken pancetta pork loin. Pig fatback ball tip, drumstick pork jowl pork chop ham spare ribs meatball porchetta capicola. Chuck andouille short ribs sausage jerky pork loin. Corned beef turkey pancetta hamburger prosciutto pork. Tongue pastrami boudin shoulder kevin jowl. Pork chop jerky beef ribs pork belly kielbasa, shoulder boudin filet mignon sirloin pig. Tri-tip chuck ribeye capicola leberkas short. </p>
-			
-			<p><span>P</span>orchetta capicola flank beef spare ribs. Meatloaf swine pancetta, turkey shoulder pig pork loin biltong frankfurter salami short ribs beef. Filet mignon picanha kevin biltong sausage tail chuck pastrami fatback tongue beef. Sausage rump tongue pork chop shoulder sirloin. Beef ribs sausage alcatra, doner beef salami prosciutto hamburger ground round burgdoggen drumstick meatball swine capicola. Leberkas capicola pork chop strip steak turkey pancetta tongue kevin cupim boudin porchetta bresaola tail kielbasa. </p>
-			
-			<p><span>F</span>rankfurter drumstick pork chop strip steak salami pig chuck chicken beef ribs tail flank. Fatback tri-tip flank tail landjaeger, capicola pork chop drumstick tenderloin. Jerky pork pork loin, turkey filet mignon tri-tip beef ribs salami chuck doner leberkas shank picanha biltong. T-bone rump short loin pastrami pig. Alcatra andouille fatback porchetta. </p>
-		</div>
-		<div class="color_gray bot_quote">
-			<h3>
-				<span class="quote">&#34</span> 
-				A brainstorm of a single man.
-				<span class="quote rotate90">&#34</span>
-			</h3>
-		</div>
-</section>
-	<!--########################## SKILLS ############################-->
-<section id="skills_container" class="full_height bg_img" style="background-image: var(--city-mid); ">
-	<h1 class="section_title color_white">Skills</h1>
-	<div class="static_text color-white float_text">
-		<h3 class="section_title color_green">NodeJs</h3>
-		<p>My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?</p> 
-	</div>
+<main id="main">
 
-	<div class="item static_button">
-		<a class="button is-hovered is-medium">Contact Me</a>
-	</div>
-	
-	<button id="" class="left_1 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="public/img/skill.png" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>NodeJs</p>
-	</button>
+	<!-- ========================== HERO ========================== -->
+	<section id="hero" class="hero" aria-label="Introduction">
+		<div class="hero_inner">
+			<div class="hero_portrait">
+				<img src="public/img/head.png" alt="" width="160" height="160" decoding="async" fetchpriority="high">
+			</div>
 
-	<button id="" class="left_2 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="yourfallback.jpg" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>Java</p>
-	</button>
-	
-	<button id="" class="left_3 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="yourfallback.jpg" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>HTML/CSS</p>
-	</button>
+			<div class="hero_content">
+				<p class="hero_eyebrow">Senior Software Engineer · Frontend Focus</p>
+				<h1 class="hero_name">Álvaro Portela <span class="hero_lastname">Figueiredo Neto</span></h1>
+				<p class="hero_tagline">Building high-precision, performant web systems.</p>
+				<p class="hero_thesis">From robotics to high-scale frontends.</p>
 
-	<button id="" class="left_4 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="yourfallback.jpg" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>Python</p>
-	</button>
-
-	<button id="" class="left_5 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="yourfallback.jpg" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>Javascript</p>
-	</button>
-
-	<button id="" class="left_6 item">
-		<div>
-			<object data="public/img/skills.svg" type="image/svg+xml" class="skill_img">
-				<img src="yourfallback.jpg" alt="stripe triangle inside a circle" />
-			</object>
-		</div>
-		<p>C/C++</p>
-	</button>
-</section>
-	<!--########################## Curriculum ############################-->
-<section id="curricullum_container" class="full_height bg_white">
-	
-	<h1 class="section_title">Curriculum</h1>
-
-	<div class="professional_container flex_container">
-		<h1 class="subsection_title">Professional Experiense</h1>
-		<div class="subsection">
-			<h2 class="subsection_title"><span class="color_dark">Owner of Some Suff:</span> XYZ workplace</h2>
-				<span class="duration">Jan 20XY - Dez 20ZW</span>
-				<p class="content">My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?</p>
-		</div>
-		<!--LINE-->
-		<svg height=15 width=90% style="padding-left:5%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#6f5e5e; stroke-width: 12;" /></svg>
-		<!--LINE-->
-		<div class="subsection">
-			<h2 class="subsection_title"><span class="color_dark">Doner of Some Suff:</span> XYZ workplace</h2>
-				<span class="duration">Jan 20XY - Dez 20ZW</span>
-				<p class="content">My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?
-
-				My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?
+				<p class="hero_tokens" aria-label="Primary stack">
+					<span>Vue /
+						Nuxt</span><span>Astro</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>Performance</span><span>Legacy
+						Migrations</span>
 				</p>
+
+				<ul class="hero_proof" aria-label="Credentials at a glance">
+					<li><strong>9 years</strong> shipping production frontend</li>
+					<li><strong>Patent</strong> holder (UFRN)</li>
+					<li><strong>2× IEEE silver</strong> · Latin America Robotics</li>
+					<li><strong>Brazil · Germany</strong></li>
+				</ul>
+
+				<div class="hero_ctas">
+					<a class="btn btn_primary" href="mailto:alvaropfn@gmail.com">Email me</a>
+					<a class="btn" href="public/cv/alvaro-portela-cv.pdf" download>Download CV</a>
+					<a class="btn btn_ghost" href="#projects">See projects</a>
+				</div>
+			</div>
 		</div>
-		<!--LINE-->
-		<svg height=15 width=90% style="padding-left:5%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#6f5e5e; stroke-width: 12;" /></svg>
-		<!--LINE-->
-		<div class="subsection">
-			<h2 class="subsection_title"><span class="color_dark">Intership:</span> ABCompany</h2>
-				<span class="duration">Jan 20XY - Dez 20ZW</span>
-				<p class="content">My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?</p>
+	</section>
+
+	<!-- ========================== ABOUT ========================== -->
+	<section id="about" class="section section_light" aria-labelledby="about_h">
+		<div class="section_inner">
+			<h2 id="about_h" class="section_title">About</h2>
+
+			<div class="about_grid">
+				<div class="about_prose">
+					<p>I'm a Senior Software Engineer specializing in front-end development, with experience in full-stack development.
+						Started in the field of mechatronics, where I won two silver medals in IEEE robotics competitions in Latin America and
+						hold a patent for a solar analysis automation tool. Today I have migrated to the field of modern web engineering. This
+						precision engineering mindset is systems.</p>
+
+					<p>For the last several years I've focused on high-stakes frontend architecture: Migrating a large-scale platform at
+						Oliver Wyman, leading a small team at Imobanco on a responsive financial app, and shipping a multilingual analytics
+						platform at Friday Finance (acquired by Pliant in 2023)) with Nuxt, Vue 3, GraphQL and Chart.js. I specialize in
+						<strong>Vue 2</strong> → <strong>3 migrations</strong>, monolith → microfrontends and in <strong>performance
+							engineering</strong> with Islands Architecture and Core Web Vitals.
+					</p>
+					<p>I care less about specific frameworks and more about how UI, state, schemas and backend fit together into a predictable system. Outside of work I cook, run, and am slowly learning game development with Godot.</p>
+				</div>
+
+				<aside class="about_thesis" aria-label="Thesis">
+					<blockquote>
+						<p>“From robotics to high-scale frontends. I bridge the gap between precision engineering and modern web performance.”</p>
+					</blockquote>
+				</aside>
+			</div>
 		</div>
-		<!--LINE-->
-		<svg height=15 width=90% style="padding-left:5%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#6f5e5e; stroke-width: 12;" /></svg>
-		<!--LINE-->
+	</section>
+
+	<!-- ========================== EXPERTISE ========================== -->
+	<section id="expertise" class="section section_dark" aria-labelledby="expertise_h">
+		<div class="section_inner">
+			<h2 id="expertise_h" class="section_title">Expertise</h2>
+			<p class="section_lede">Three practices where my work sits most comfortably. Each with its own stack, own failure modes, own wins.</p>
+
+			<div class="expertise_grid">
+
+				<article class="expertise_card">
+					<h3>Frontend Engineering</h3>
+					<p>UIs that scale with complexity without burning ownership on future maintainers. Typed end-to-end, testable at every boundary, with state modeled as a single source of truth.</p>
+					<ul class="tag_list" aria-label="Technologies">
+						<li>Vue 3</li><li>Nuxt</li><li>React</li><li>TypeScript</li><li>Pinia</li><li>GraphQL / Apollo</li><li>Cypress</li><li>Playwright</li>
+					</ul>
+				</article>
+
+				<article class="expertise_card">
+					<h3>Legacy Migrations</h3>
+					<p>Vue 2 to 3. Monolith to microfrontends. Angular to modern stacks. The kind of work that needs a clear map before the first commit and an incremental path that never freezes delivery.</p>
+					<ul class="tag_list" aria-label="Patterns">
+						<li>Incremental rewrites</li><li>Adapter layers</li><li>Feature flags</li><li>MVC / MVVM</li><li>Module federation</li>
+					</ul>
+				</article>
+
+				<article class="expertise_card">
+					<h3>Performance Engineering</h3>
+					<p>Core Web Vitals as a product metric, not an afterthought. Islands Architecture with Astro for content-heavy surfaces, route-level code splitting, disciplined hydration and measurable wins.</p>
+					<ul class="tag_list" aria-label="Tools">
+						<li>Astro</li><li>Islands Architecture</li><li>LCP / INP / CLS</li><li>Lighthouse CI</li><li>Bundle analysis</li>
+					</ul>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================== PROJECTS ========================== -->
+	<section id="projects" class="section section_light" aria-labelledby="projects_h">
+		<div class="section_inner">
+			<h2 id="projects_h" class="section_title">Projects</h2>
+			<p class="section_lede">Selected work — closed-source platforms, a patent, and research. Public records linked where they exist.</p>
+
+			<ol class="projects_list" role="list" data-hydrate="projects">
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">01</div>
+					<article class="project_body">
+						<header>
+							<h3>SIAI — Personnel Acts</h3>
+							<p class="project_meta"><span>TCE-RN</span><span><time datetime="2019">2019</time>–<time datetime="2020">2020</time></span></p>
+						</header>
+						<p>Web system that automates the validation of personnel concession acts for the Court of Auditors of Rio Grande do Norte. Eliminated the backlog in the Personnel Acts Directorate — roughly <strong>80% of the Court's total caseload</strong>.</p>
+						<ul class="project_bullets">
+							<li>Led requirements gathering with legal staff; shipped the validation flow end-to-end.</li>
+							<li>Designed the rule engine so compliance changes become config, not deploys.</li>
+							<li>Delivered alongside a second platform (SIAI Competitions) sharing a common auth and UI layer.</li>
+						</ul>
+						<ul class="tag_list"><li>Full-Stack</li><li>Legacy Migration</li><li>Public Sector</li></ul>
+						<p class="project_links"><a href="https://pluni.imd.ufrn.br/pluni/4/visualizarProduto" target="_blank" rel="noopener">Public record →</a></p>
+					</article>
+				</li>
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">02</div>
+					<article class="project_body">
+						<header>
+							<h3>SIAI — Public Competitions</h3>
+							<p class="project_meta"><span>TCE-RN</span><span><time datetime="2019">2019</time>–<time datetime="2020">2020</time></span></p>
+						</header>
+						<p>Companion platform helping the Court enforce internal regulations while overseeing public competitions run by the state. Compliance rules encoded directly into the workflow.</p>
+						<ul class="project_bullets">
+							<li>Modeled the competition lifecycle as a state machine to make invariants explicit.</li>
+							<li>Shared UI primitives and auth with SIAI Personnel Acts to reduce duplicated work.</li>
+						</ul>
+						<ul class="tag_list"><li>Full-Stack</li><li>Compliance</li><li>Public Sector</li></ul>
+						<p class="project_links"><a href="https://pluni.imd.ufrn.br/pluni/44/visualizarProduto" target="_blank" rel="noopener">Public record →</a></p>
+					</article>
+				</li>
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">03</div>
+					<article class="project_body">
+						<header>
+							<h3>Plasticity Limit Tool</h3>
+							<p class="project_meta"><span>Patent · UFRN</span></p>
+						</header>
+						<p>Automated device standardizing the soil plasticity limit test — traditionally done by hand with inconsistent results across operators. Co-authored patent filed through UFRN's patent office.</p>
+						<ul class="project_bullets">
+							<li>Built the embedded control firmware and the operator-facing interface.</li>
+							<li>Worked inside a cross-disciplinary team (civil engineering, mechatronics, software).</li>
+						</ul>
+						<ul class="tag_list"><li>Patent</li><li>Hardware + Software</li><li>Research</li></ul>
+						<p class="project_links"><a href="https://agir.ufrn.br/vitrine/patentes/2000" target="_blank" rel="noopener">Patent record →</a></p>
+					</article>
+				</li>
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">04</div>
+					<article class="project_body">
+						<header>
+							<h3>Friday Finance Platform</h3>
+							<p class="project_meta"><span>Friday Finance (Germany)</span><span><time datetime="2022-04">2022</time>–<time datetime="2023-07">2023</time></span></p>
+						</header>
+						<p>Financial analytics platform surfacing the financial health of SMBs across Europe. Multilingual, data-dense, integrated with bank APIs in real time.</p>
+						<ul class="project_bullets">
+							<li>Built the multilingual frontend in Nuxt + Vue 3; owned the charting layer with Chart.js.</li>
+							<li>Integrated bank data via GraphQL with careful shaping to keep frontend and backend on a shared contract.</li>
+							<li>Supported backend with Node, Express and Prisma; wrote Cypress + Jest test suites.</li>
+						</ul>
+						<ul class="tag_list"><li>Nuxt</li><li>Vue 3</li><li>GraphQL</li><li>Data Viz</li><li>FinTech</li></ul>
+					</article>
+				</li>
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">05</div>
+					<article class="project_body">
+						<header>
+							<h3>Imobanco Web & Mobile</h3>
+							<p class="project_meta"><span>Imobanco</span><span><time datetime="2023-07">2023</time>–<time datetime="2024-03">2024</time></span></p>
+						</header>
+						<p>Responsive web and mobile application for financial services. Led a small team focused on delivery cadence, system performance, and mentoring.</p>
+						<ul class="project_bullets">
+							<li>Led a small team through feature design, implementation and release.</li>
+							<li>Introduced pair programming as the default collaboration mode for juniors.</li>
+							<li>Drove performance fixes that moved user-visible metrics, not just synthetic scores.</li>
+						</ul>
+						<ul class="tag_list"><li>Team Lead</li><li>Frontend</li><li>FinTech</li></ul>
+					</article>
+				</li>
+
+				<li class="project">
+					<div class="project_num" aria-hidden="true">06</div>
+					<article class="project_body">
+						<header>
+							<h3>Oliver Wyman Platform Migration</h3>
+							<p class="project_meta"><span>Oliver Wyman</span><span><time datetime="2025-04">2025</time></span></p>
+						</header>
+						<p>Primary engineer on the migration of a large-scale web platform to a newer version within an Agile team.</p>
+						<ul class="project_bullets">
+							<li>Designed the incremental migration path; kept the platform deliverable through the whole transition.</li>
+							<li>Built the reusable component library and wired the automated test layer.</li>
+							<li>Shipped through CI/CD with ArgoCI and Docker.</li>
+						</ul>
+						<ul class="tag_list"><li>Legacy Migration</li><li>CI/CD</li><li>Consulting</li></ul>
+					</article>
+				</li>
+
+			</ol>
+		</div>
+	</section>
+
+	<!-- ========================== EXPERIENCE ========================== -->
+	<section id="experience" class="section section_light" aria-labelledby="experience_h">
+		<div class="section_inner">
+			<h2 id="experience_h" class="section_title">Experience</h2>
+			<p class="section_lede">Reverse-chronological. Sabbaticals are marked explicitly.</p>
+
+			<ol class="timeline" role="list" data-hydrate="experience">
+
+				<li class="timeline_entry">
+					<div class="timeline_dates">
+						<time datetime="2025-04">Apr 2025</time> — <time datetime="2025-10">Oct 2025</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Senior Frontend Engineer · Oliver Wyman</h3>
+						<p class="timeline_loc">Natal, BR · Remote</p>
+						<ul>
+							<li>Primary engineer on a large-scale web platform migration inside an Agile team.</li>
+							<li>Built reusable components, shipped automated tests and CI/CD releases through ArgoCI and Docker.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="timeline_entry timeline_sabbatical">
+					<div class="timeline_dates">
+						<time datetime="2025-10">Oct 2025</time> — <time datetime="2026-04">Present</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Sabbatical</h3>
+						<p>Intentional break. Traveling, investing in personal projects, learning game development with Godot, and rebuilding this portfolio.</p>
+					</div>
+				</li>
+
+				<li class="timeline_entry">
+					<div class="timeline_dates">
+						<time datetime="2023-07">Jul 2023</time> — <time datetime="2024-03">Mar 2024</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Senior Frontend Engineer · Imobanco</h3>
+						<p class="timeline_loc">Natal, BR</p>
+						<ul>
+							<li>Led a small team designing, building and maintaining a responsive web and mobile app for financial services.</li>
+							<li>Improved system performance and mentored junior developers through pair programming.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="timeline_entry timeline_sabbatical">
+					<div class="timeline_dates">
+						<time datetime="2024-03">Mar 2024</time> — <time datetime="2025-04">Apr 2025</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Sabbatical</h3>
+						<p>Intentional career break between engagements.</p>
+					</div>
+				</li>
+
+				<li class="timeline_entry">
+					<div class="timeline_dates">
+						<time datetime="2022-04">Apr 2022</time> — <time datetime="2023-07">Jul 2023</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Full Stack Engineer · Friday Finance</h3>
+						<p class="timeline_loc">Germany · Remote</p>
+						<ul>
+							<li>Built a multilingual financial analytics web app for SMBs across Europe with Nuxt + Vue 3.</li>
+							<li>Integrated bank data via GraphQL, shipped rich Chart.js dashboards, and supported Node/Express/Prisma backend services.</li>
+							<li>Authored Cypress frontend tests and Jest API tests.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="timeline_entry">
+					<div class="timeline_dates">
+						<time datetime="2019-07">Jul 2019</time> — <time datetime="2020-12">Dec 2020</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Full Stack Engineer · TCE-RN</h3>
+						<p class="timeline_loc">Natal, BR</p>
+						<ul>
+							<li>Migrated legacy state-government systems and shipped new tools for public competitions and servant benefits.</li>
+							<li>Reduced multi-week manual processes down to days.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="timeline_entry">
+					<div class="timeline_dates">
+						<time datetime="2016-02">Feb 2016</time> — <time datetime="2017-12">Dec 2017</time>
+					</div>
+					<div class="timeline_body">
+						<h3>Intern · SINFO-UFRN</h3>
+						<p class="timeline_loc">Natal, BR</p>
+						<ul>
+							<li>QA for SIGAA, the integrated academic management system used across Brazilian federal universities — including modules consumed by the Federal Police.</li>
+							<li>Built the hardware/software system operating the ticket gates of the university restaurant.</li>
+						</ul>
+					</div>
+				</li>
+
+			</ol>
+		</div>
+	</section>
+
+	<!-- ========================== RECOGNITION ========================== -->
+	<section id="recognition" class="section section_dark" aria-labelledby="recognition_h">
+		<div class="section_inner">
+			<h2 id="recognition_h" class="section_title">Recognition</h2>
+			<p class="section_lede">A patent, two international silver medals, and a community I helped build.</p>
+
+			<div class="recognition_grid">
+
+				<article class="recognition_card">
+					<h3>Patent — Plasticity Limit Tool</h3>
+					<p class="recognition_meta">UFRN</p>
+					<p>Automation of the soil consistency test, resolving the lack of standardization from manual execution. Filed through UFRN's patent office.</p>
+				</article>
+
+				<article class="recognition_card">
+					<h3>2nd Place · IEEE Latin America Robotics</h3>
+					<p class="recognition_meta"><time datetime="2019">2019</time></p>
+					<p>Designed the software components with tree-structure representation for robot navigation in a simulated port environment.</p>
+				</article>
+
+				<article class="recognition_card">
+					<h3>2nd Place · IEEE Latin America Robotics</h3>
+					<p class="recognition_meta"><time datetime="2018">2018</time></p>
+					<p>Built hardware and software for a robotic claw that grasped and moved containers in a simulated port environment.</p>
+				</article>
+
+				<article class="recognition_card">
+					<h3>GIM — Maker Integration Group</h3>
+					<p class="recognition_meta">UFRN</p>
+					<p>Co-founded and coordinated a 50-person university group around programming, electronics and maker culture. Organized 3 editions of Arduino Day, reaching up to 800 visitors.</p>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================== TESTIMONIALS ========================== -->
+	<!-- Hidden by default; unhidden by content.js when the Firestore collection has >= 1 doc. -->
+	<section id="testimonials" class="section section_light" aria-labelledby="testimonials_h" hidden>
+		<div class="section_inner">
+			<h2 id="testimonials_h" class="section_title">What people say</h2>
+			<p class="section_lede">Quotes from people I've worked with.</p>
+			<ol class="testimonials_list" role="list" data-hydrate="testimonials">
+				<!-- Hydrated from Firestore by public/js/content.js. Empty by default. -->
+			</ol>
+		</div>
+	</section>
+
+	<!-- ========================== PERSONAL ========================== -->
+	<section id="personal" class="section section_light" aria-labelledby="personal_h">
+		<div class="section_inner">
+			<h2 id="personal_h" class="section_title">Personal</h2>
+			<p class="section_lede">What I do when I'm not in front of an editor.</p>
+
+			<div class="personal_grid">
+				<article class="personal_card">
+					<h3>Cooking</h3>
+					<p>Good food is iteration — start from nothing, taste, adjust, repeat. Same loop as code, on a tighter deadline.</p>
+				</article>
+
+				<article class="personal_card">
+					<h3>Running</h3>
+					<p>Where the ideas that don't come out in the editor usually show up. And the cheapest way to disconnect from a problem for forty minutes.</p>
+				</article>
+
+				<article class="personal_card">
+					<h3>Game Development</h3>
+					<p>Learning Godot in the off-hours. Different kind of problem — game loop, physics, feel — and it forces me to think about the user in ways product work doesn't.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================== CONTACT ========================== -->
+	<section id="contact" class="section section_light" aria-labelledby="contact_h">
+		<div class="section_inner">
+			<h2 id="contact_h" class="section_title">Contact</h2>
+			<p class="section_lede">Open to <strong>Senior or Staff Frontend roles</strong>, remote-first. Best fit: architecture-heavy frontend work in FinTech, consultancy or public sector. Reach out by email or LinkedIn.</p>
+
+			<address class="contact_grid">
+				<a class="contact_link" href="mailto:alvaropfn@gmail.com" rel="me">
+					<span class="contact_label">Email</span>
+					<span class="contact_value">alvaropfn@gmail.com</span>
+				</a>
+				<a class="contact_link" href="https://www.linkedin.com/in/alvaropfn" target="_blank" rel="me noopener">
+					<span class="contact_label">LinkedIn</span>
+					<span class="contact_value">/in/alvaropfn</span>
+				</a>
+				<a class="contact_link" href="https://github.com/alvaropfn" target="_blank" rel="me noopener">
+					<span class="contact_label">GitHub</span>
+					<span class="contact_value">@alvaropfn</span>
+				</a>
+				<a class="contact_link" href="https://x.com/alvaroportela" target="_blank" rel="me noopener">
+					<span class="contact_label">Twitter / X</span>
+					<span class="contact_value">@alvaroportela</span>
+				</a>
+			</address>
+
+			<div class="contact_cta">
+				<a class="btn btn_primary" href="public/cv/alvaro-portela-cv.pdf" download>Download CV</a>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="site_footer">
+	<div class="section_inner">
+		<p>Álvaro Portela Figueiredo Neto · Natal, Brazil · <time datetime="2026">2026</time></p>
+		<p class="footer_meta">Static HTML. Hosted on GitHub Pages. <a href="/legacy/">Previous version</a>.</p>
 	</div>
-	<!------professional // education ------>
-	<div class="educational_container flex_container">
-		<h1 class="subsection_title">Education</h1>
-		<div class="subsection">
-			<h2 class="subsection_title"><span class="color_dark">Pos Degree in things</span><br>University of things</h2>
-				<span class="duration">Jan 20XY - Dez 20ZW</span>
-				<p class="content">My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?</p>
-		</div>
-		<!--LINE-->
-		<svg height=15 width=90% style="padding-left:5%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#6f5e5e; stroke-width: 12;" /></svg>
-		<!--LINE-->
-		<div class="subsection">
-			<h2 class="subsection_title"><span class="color_dark">Degrees of Freedon:</span><br>University of things</h2>
-				<span class="duration">Jan 20XY - Dez 20ZW</span>
-				<p class="content">My money's in that office, right? If she start giving mesome bullshit about it ain't there, and we got to gosomeplace else and get it, I'm gonna shoot you in thehead then and there. Then I'm gonna shoot that bitch inthe kneecaps, find out where my goddamn money is. Shegonna tell me too. Hey, look at me when I'm talking toyou, motherfucker. You listen: we go in there, and thatnigga Winston or anybody else is in there, you the firstmotherfucker to get shot. You understand?</p>
-		</div>
-		<!--LINE-->
-		<svg height=15 width=90% style="padding-left:5%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#6f5e5e; stroke-width: 12;" /></svg>
-		<!--LINE-->
-	</div>
-	<div class="buttons_container">
-		<div> </div>
-		<a class="button is-hovered is-medium">My linkedin</a>
-		<a class="button is-hovered is-medium">Download CV</a>
-		<div> </div>
-	</div>
-</section>
+</footer>
+
+<script type="module" src="public/js/content.js" defer></script>
+
 </body>
 </html>
