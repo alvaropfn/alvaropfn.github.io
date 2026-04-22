@@ -7,12 +7,17 @@
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js';
 import {
-	getFirestore,
 	collection,
-	query,
+	getDocs,
+	getFirestore,
 	orderBy,
-	getDocs
+	query
 } from 'https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js';
+import {
+	getDownloadURL,
+	getStorage,
+	ref as storageRef
+} from 'https://www.gstatic.com/firebasejs/12.12.0/firebase-storage.js';
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyDW0yjoPrwfrrLFSZTCmUhPpKkv0u29YBs',
@@ -25,6 +30,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storage = getStorage(app);
+
+// Path of the CV file inside the Storage bucket. To replace the CV,
+// upload a new file to this exact path (Firebase Console → Storage → Replace).
+const CV_STORAGE_PATH = 'cv/Alvaro_Curriculum-en.pdf';
+const CV_DOWNLOAD_FILENAME = 'Alvaro_Curriculum-en.pdf';
 
 // ---------------------------------------------------------
 // Helpers
@@ -184,6 +195,26 @@ function revealTestimonials() {
 	if (navItem) navItem.removeAttribute('hidden');
 }
 
+async function hydrateCvLink() {
+	const buttons = document.querySelectorAll('[data-cv-link]');
+	if (!buttons.length) return { key: 'cv', status: 'no-container' };
+	try {
+		const url = await getDownloadURL(storageRef(storage, CV_STORAGE_PATH));
+		buttons.forEach((btn) => {
+			btn.href = url;
+			btn.setAttribute('download', CV_DOWNLOAD_FILENAME);
+			btn.setAttribute('target', '_blank');
+			btn.setAttribute('rel', 'noopener');
+			btn.removeAttribute('aria-disabled');
+			btn.removeAttribute('data-cv-pending');
+		});
+		return { key: 'cv', status: 'ok', count: buttons.length };
+	} catch (err) {
+		console.warn('[content] CV URL fetch failed — button left disabled.', err);
+		return { key: 'cv', status: 'error', error: err };
+	}
+}
+
 async function run() {
 	const t0 = performance.now();
 	const results = await Promise.allSettled([
@@ -193,7 +224,8 @@ async function run() {
 		}),
 		hydrate('testimonials', renderTestimonial, {
 			onSuccess: revealTestimonials
-		})
+		}),
+		hydrateCvLink()
 	]);
 	const elapsed = (performance.now() - t0).toFixed(0);
 	const summary = results.map((r) => r.status === 'fulfilled' ? r.value : { status: 'rejected' });

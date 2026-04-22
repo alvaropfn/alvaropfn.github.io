@@ -389,6 +389,13 @@ section[id], [id] { scroll-margin-top: 72px; }
 	transform: none;
 }
 
+/* CV button while waiting for the Storage URL to resolve */
+[data-cv-pending] {
+	opacity: 0.6;
+	pointer-events: none;
+	cursor: wait;
+}
+
 /* buttons on light sections */
 .section_light .btn { border-color: var(--dark); color: var(--dark); }
 .section_light .btn:hover { background: var(--dark); color: var(--white); }
